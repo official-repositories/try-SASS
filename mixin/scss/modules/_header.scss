@@ -1,0 +1,15 @@
+// menggunakan use
+
+@use 'submodules/mixin' as m;
+
+.header ul {
+    // @include mixin.inline-list();
+    @include m.inline-list();
+    li {
+        background-color: black;
+        padding: .7em;
+        a {
+            color: white;
+        }
+    }
+}

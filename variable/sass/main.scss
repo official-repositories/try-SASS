@@ -1,0 +1,49 @@
+// CSS variable
+// :root {
+//     --primary-color: #f4f1de;
+//     --secondary-color: #f2cc8f;
+//     --text-color: #e07a5f;
+// }
+
+// body {
+//     background-color: var(--primary-color);
+// }
+
+// h1 {
+//     color: var(--text-color);
+// }
+
+// p {
+//     color: var(--secondary-color);
+// }
+
+// SASS Variable
+// $secondary-color: #f2cc8f;
+// $text-color: #e07a5f;
+// // variable dibawah akan diabaikan jika ada !global
+// $primary-color: blue;
+
+// body {
+//     // !global akan nimpa variable luar jika dipakai
+//     $primary-color: #f4f1de !global ;
+//     background-color: $primary-color;
+// }
+
+// h1 {
+//     color: $text-color;
+// }
+
+// Map
+// $alert-danger: red;
+// $alert-success: green;
+// $alert-warning: orange;
+$alert: (
+    'danger': red,
+    'success': green,
+    'warning': orange,
+);
+
+h1 {
+    color: map-get($map: alert, $key: warning);
+    // color: map-get($alert, 'warning');
+}

@@ -1,0 +1,55 @@
+// .main {
+//     background-color: lightblue;
+
+//     .main-heading {
+//         font-size: 2em;
+//     }
+
+//     .main-paragraph {
+//         font-size: 1.5em;
+//     }
+// }
+
+// nesting selector
+// .main, footer {
+//     h1, p {
+//         letter-spacing: 1px;
+//     }
+// }
+
+// & (Parent Selector)
+// .main {
+//     // memberi tahu container parentnya
+//     .container & {
+//         background-color: lightblue;
+//     }
+//     .main-heading {
+//         font-size: 2em;
+//     }
+
+//     // & disini memberi tahu bahwa main adalah parent
+//     &:hover {
+//         background-color: salmon;
+//     }
+// }
+
+
+.main {
+    // & menggantikan selectornya
+    & &-heading {
+        font-size: 2em;
+    }
+    & &-paragraph {
+        font-size: 1.5em;
+    }
+}
+
+.footer {
+    // interpolasi, tidak usah menulis & &
+    #{&}-heading {
+        font-size: 2em;
+    }
+    #{&}-paragraph {
+        font-size: 1.5em;
+    }
+}
